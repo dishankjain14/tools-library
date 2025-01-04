@@ -1,0 +1,155 @@
+/* sortingFilter.css */
+
+/* Overall Styling for the Sorting Section */
+.sorting-filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-top: 0px; /* To hover over the banner */
+  background: #000000 ; /* Ensures transparency over the banner */
+  z-index: 2;
+  position: relative;
+}
+
+/* Categories container */
+.categories {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Category Wrapper */
+.category-wrapper {
+  position: relative;
+}
+
+/* Category Buttons */
+.category-btn {
+  background-color: #0f3460; /* Button color matching the banner */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  border-radius: 60px;
+}
+
+.category-btn:hover {
+  background-color: #e94560; /* Highlight on hover (red tone) */
+  color: #ffffff;
+}
+
+/* Dropdown Menu */
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #16213e; /* Darker dropdown background */
+  border-radius: 0px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  z-index: 1000;
+  min-width: 200px;
+  margin: 0px;
+  border-radius: 30px;
+}
+
+/* Dropdown Items */
+.dropdown div {
+  padding: 10px 20px;
+  cursor: pointer;
+  color: white;
+  border: 1px #f2f2f2;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown div:hover {
+  background-color: #e94560; /* Highlight for dropdown items */
+}
+
+/* Show dropdown on hover */
+.category-wrapper:hover .dropdown {
+  display: block;
+}
+
+/* Search Bar Styling */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-input {
+  width: 200px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.search-btn {
+  font-size: 16px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(90deg, #3a8dd5, #72b9e8); /* Same as category buttons */
+  transition: background 0.3s ease;
+}
+
+.search-btn:hover {
+  background: linear-gradient(90deg, #72b9e8, #3a8dd5);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover Dropdown Menu for Categories */
+.category-btn:hover::after {
+  content: attr(data-hover-options);
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(255, 255, 255, 0.9); /* White background with transparency */
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 3;
+  font-size: 14px;
+  width: auto;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .sorting-filter {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  .category-btn {
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 3px;
+    border-radius: 45px;
+  }
+
+  .dropdown {
+    min-width: 180px;
+  }
+  .dropdown div {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+
+}

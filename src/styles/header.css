@@ -1,0 +1,201 @@
+/* Header Styles */
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background: transparent; /* Semi-transparent background */
+  backdrop-filter: blur(5px); /* Optional for a glass effect */
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: 0;
+  height: 120px;
+  behavior: inherit;
+}
+
+.logo {
+    width: 180px; /* Set the width of the logo */
+    height: 120px; /* Set the height of the logo */
+    background-image: url("./../images/logo.png");
+    background-size: contain; /* Ensure the image fits within the div */
+    background-repeat: no-repeat;
+    background-position: left;
+  }
+  
+
+.header h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0;
+}
+
+.header nav a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+/* Banner Styles */
+.banner {
+  position: relative;
+  width: 100%;
+  height: 850px;
+  background: url('./../images/banner1.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #000;
+  overflow: hidden;
+}
+
+.banner-content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  max-width: 80%;
+  gap: 10px;
+}
+
+.banner h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 0;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.banner p {
+  font-size: 18px;
+  margin: 10px 0 0;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(80px); /* Start slightly below */
+  animation: slideUp 1.5s ease-in-out forwards; /* Trigger animation */
+}
+
+/* Animation keyframes */
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-120px);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .banner {
+    height: 450px;
+  }
+
+  .logo {
+    height: 60px;
+    width: 120px;
+  }
+
+  .banner h1 {
+    font-size: 24px;
+  }
+
+  .banner p {
+    font-size: 14px;
+  }
+
+  .header h1 {
+    font-size: 18px;
+  }
+
+  .header nav a {
+    font-size: 14px;
+  }
+
+  .header {
+    height: 100px;
+  }
+
+  .slide-up {
+    opacity: 0;
+    transform: translateY(60px); /* Start slightly below */
+    animation: slideUp 1.5s ease-in-out forwards; /* Trigger animation */
+  }
+  
+  /* Animation keyframes */
+  @keyframes slideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(60px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(30px);
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .banner {
+    height: 500px;
+  }
+
+  .logo {
+    height: 40px;
+    width: 100px;
+  }
+
+  .banner h1 {
+    font-size: 18px;
+  }
+
+  .banner p {
+    font-size: 12px;
+  }
+
+  .header h1 {
+    font-size: 16px;
+  }
+
+  .header nav a {
+    font-size: 12px;
+  }
+
+  .header {
+    height: 60px;
+  }
+
+  .slide-up {
+    opacity: 0;
+    transform: translateY(40px); /* Start slightly below */
+    animation: slideUp 1.5s ease-in-out forwards; /* Trigger animation */
+  }
+  
+  /* Animation keyframes */
+  @keyframes slideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(30px);
+    }
+  }
+
+}
+
+
+
